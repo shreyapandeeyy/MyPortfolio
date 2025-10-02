@@ -41,7 +41,6 @@ const nextConfig = {
       ],
     },
   ],
-  output: "export",
   productionBrowserSourceMaps: false,
   reactProductionProfiling: false,
   reactStrictMode: !isProduction,
