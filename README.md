@@ -1,4 +1,4 @@
-## 🌌 **daedalOS** 🌌
+## 🌌 **DeskFolio** 🌌
 
 ## _Desktop environment in the browser_
 
@@ -264,8 +264,8 @@ yarn serve
 ##### Docker
 
 ```
-docker build -t daedalos .
-docker run -dp 3000:3000 --rm --name daedalos daedalos
+docker build -t deskfolio .
+docker run -dp 3000:3000 --rm --name deskfolio deskfolio
 ```
 
 ##### Notes
