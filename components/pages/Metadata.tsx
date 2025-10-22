@@ -54,7 +54,7 @@ const Metadata: FC = () => {
     async (path: string) => {
       const imageBuffer = await readFile(path);
 
-      if (!imageBuffer?.length) return "";
+      if (!imageBuffer || imageBuffer.length === 0) return "";
 
       const { cursorToCss } = await import("utils/imageDecoder");
 

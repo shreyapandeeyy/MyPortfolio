@@ -22,7 +22,7 @@ export const DEFAULT_CLOCK_SOURCE: ClockSource = "local";
 
 export const DEFAULT_THEME: ThemeName = "defaultTheme";
 
-export const DEFAULT_WALLPAPER = "VANTA";
+export const DEFAULT_WALLPAPER = "COASTAL_LANDSCAPE";
 
 export const DEFAULT_WALLPAPER_FIT: WallpaperFit = "fill";
 
@@ -166,8 +166,6 @@ export const MENU_SEPERATOR = { seperator: true };
 export const MILLISECONDS_IN_SECOND = 1000;
 
 export const MILLISECONDS_IN_MINUTE = 60000;
-
-export const MILLISECONDS_IN_HOUR = 3600000;
 
 export const MILLISECONDS_IN_DAY = 86400000;
 
@@ -368,9 +366,9 @@ export const DEFAULT_SCROLLBAR_WIDTH = 17;
 export const TASKBAR_HEIGHT = 30;
 
 export const PACKAGE_DATA = {
-  alias: "DeskFolio",
+  alias: "Shreya's Portfolio",
   author: {
-    email: "dustinbrett@gmail.com",
+    email: "shreyapandey.connect@gmail.com",
     name: "Shreya Pandey",
     npub: "npub10uc7hg6wdxhhd7ee8x9c5lr9d0ux7272rv2m0mc03ds54q7quxjss02r3p",
     url: "https://dustinbrett.com",

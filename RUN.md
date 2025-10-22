@@ -1,6 +1,6 @@
-# How to Run DeskFolio
+# How to Run Shreya's Portfolio
 
-This document outlines the steps to successfully run the DeskFolio project locally.
+This document outlines the steps to successfully run the Shreya's Portfolio project locally.
 
 ## Prerequisites
 
@@ -10,11 +10,13 @@ This document outlines the steps to successfully run the DeskFolio project local
 ## Steps to Run
 
 ### 1. Install Dependencies
+
 ```bash
 yarn install
 ```
 
 ### 2. Run Prebuild Scripts
+
 This step is **critical** and must be done before starting the development server. The prebuild scripts generate required files that the application needs to run properly.
 
 ```bash
@@ -22,6 +24,7 @@ yarn build:prebuild
 ```
 
 This command runs several scripts:
+
 - `scripts/robots.js` - Generates robots.txt
 - `scripts/rssBuilder.js` - Builds RSS feed
 - `scripts/searchIndex.js` - Creates search index
@@ -30,6 +33,7 @@ This command runs several scripts:
 - `yarn build:fs:public` - Generates file system JSON files
 
 ### 3. Start Development Server
+
 ```bash
 yarn dev
 ```
@@ -38,8 +42,8 @@ yarn dev
 
 Once the development server is running, you can access the application at:
 
-- **Local:** http://localhost:3000
-- **Network:** http://192.168.189.1:3000
+- **Local:** <http://localhost:3000>
+- **Network:** <http://192.168.189.1:3000>
 
 ## Troubleshooting
 

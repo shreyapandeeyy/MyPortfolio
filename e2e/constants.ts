@@ -185,10 +185,7 @@ export const MEDIA_RECORDER_HEADLESS_NOT_SUPPORTED_BROWSERS = new Set([
   "webkit",
 ]);
 export const PYODIDE_HEADLESS_NOT_SUPPORTED_BROWSERS = new Set(["firefox"]);
-export const WEBGPU_HEADLESS_NOT_SUPPORTED_BROWSERS = new Set([
-  "firefox",
-  "webkit",
-]);
+export const WEBGPU_HEADLESS_NOT_SUPPORTED_BROWSERS = new Set(["webkit"]);
 
 export const FILE_MENU_ITEMS = [
   /^Open$/,

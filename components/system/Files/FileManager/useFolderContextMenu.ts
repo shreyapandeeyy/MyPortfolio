@@ -56,9 +56,12 @@ const updateSortBy =
     sortBy === value ? !isAscending : defaultIsAscending,
   ];
 
+const EASTER_EGG_CLICK_COUNT = 2;
 const CAPTURE_FPS = 30;
 const MIME_TYPE_VIDEO_WEBM = "video/webm";
 const MIME_TYPE_VIDEO_MP4 = "video/mp4";
+
+let triggerEasterEggCountdown = EASTER_EGG_CLICK_COUNT;
 
 let currentMediaStream: MediaStream | undefined;
 let currentMediaRecorder: MediaRecorder | undefined;
@@ -93,6 +96,26 @@ const useFolderContextMenu = (
     updateRecentFiles,
     wallpaperImage,
   } = useSession();
+  const setWallpaper = useCallback(
+    (wallpaper: string) => {
+      if (wallpaper === "VANTA") {
+        triggerEasterEggCountdown -= 1;
+
+        const triggerEasterEgg = triggerEasterEggCountdown === 0;
+
+        setSessionWallpaper(`VANTA${triggerEasterEgg ? " WIREFRAME" : ""}`);
+
+        if (triggerEasterEgg) {
+          triggerEasterEggCountdown = EASTER_EGG_CLICK_COUNT;
+        }
+      } else {
+        triggerEasterEggCountdown = EASTER_EGG_CLICK_COUNT;
+
+        setSessionWallpaper(wallpaper);
+      }
+    },
+    [setSessionWallpaper]
+  );
   const { minimize, open } = useProcesses();
   const updateSorting = useCallback(
     (value: SortBy | "", defaultIsAscending: boolean): void => {
@@ -436,27 +459,19 @@ const useFolderContextMenu = (
                   menu: WALLPAPER_MENU.filter(
                     ({ requiresWebGPU }) => !requiresWebGPU || hasWebGPU
                   ).reduce<MenuItem[]>(
-                    (menu, { hasAlt = true, id, name }) => [
+                    (menu, item) => [
                       ...menu,
                       {
                         action: () => {
                           if (isMusicVisualizationRunning) {
                             stopGlobalMusicVisualization();
                           }
-                          setSessionWallpaper(
-                            `${id}${
-                              hasAlt &&
-                              wallpaperImage.startsWith(id) &&
-                              !wallpaperImage.endsWith(" ALT")
-                                ? " ALT"
-                                : ""
-                            }`
-                          );
+                          setWallpaper(item.id);
                         },
-                        label: name || id,
-                        toggle: hasAlt
-                          ? wallpaperImage.startsWith(id)
-                          : wallpaperImage === id,
+                        label: item.name || item.id,
+                        toggle: item.startsWith
+                          ? wallpaperImage.startsWith(item.id)
+                          : wallpaperImage === item.id,
                       },
                     ],
                     isMusicVisualizationRunning
@@ -595,7 +610,7 @@ const useFolderContextMenu = (
       processesRef,
       rootFs?.mntMap,
       setForegroundId,
-      setSessionWallpaper,
+      setWallpaper,
       sortBy,
       updateDesktopIconPositions,
       updateFolder,
