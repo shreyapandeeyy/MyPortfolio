@@ -167,6 +167,8 @@ export const MILLISECONDS_IN_SECOND = 1000;
 
 export const MILLISECONDS_IN_MINUTE = 60000;
 
+export const MILLISECONDS_IN_HOUR = 3600000;
+
 export const MILLISECONDS_IN_DAY = 86400000;
 
 export const ZIP_EXTENSIONS = new Set([".jsdos", ".pk3", ".wsz", ".zip"]);
@@ -366,10 +368,10 @@ export const DEFAULT_SCROLLBAR_WIDTH = 17;
 export const TASKBAR_HEIGHT = 30;
 
 export const PACKAGE_DATA = {
-  alias: "daedalOS",
+  alias: "DeskFolio",
   author: {
     email: "dustinbrett@gmail.com",
-    name: "Dustin Brett",
+    name: "Shreya Pandey",
     npub: "npub10uc7hg6wdxhhd7ee8x9c5lr9d0ux7272rv2m0mc03ds54q7quxjss02r3p",
     url: "https://dustinbrett.com",
   },

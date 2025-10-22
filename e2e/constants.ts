@@ -185,7 +185,10 @@ export const MEDIA_RECORDER_HEADLESS_NOT_SUPPORTED_BROWSERS = new Set([
   "webkit",
 ]);
 export const PYODIDE_HEADLESS_NOT_SUPPORTED_BROWSERS = new Set(["firefox"]);
-export const WEBGPU_HEADLESS_NOT_SUPPORTED_BROWSERS = new Set(["webkit"]);
+export const WEBGPU_HEADLESS_NOT_SUPPORTED_BROWSERS = new Set([
+  "firefox",
+  "webkit",
+]);
 
 export const FILE_MENU_ITEMS = [
   /^Open$/,
@@ -306,7 +309,7 @@ export const NEW_FILE_LABEL_TEXT = "New Text Document.txt";
 
 export const CLOCK_REGEX = /^(1[0-2]|0?[1-9])(?::[0-5]\d){2}\s?(AM|PM)$/;
 
-export const BASE_APP_TITLE = "daedalOS";
+export const BASE_APP_TITLE = "DeskFolio";
 export const BASE_APP_FAVICON = /^\/favicon.ico$/;
 export const BASE_APP_FAVICON_TEXT = "/favicon.ico";
 

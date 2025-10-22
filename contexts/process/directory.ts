@@ -407,6 +407,17 @@ const directory: Processes = {
     singleton: true,
     title: "Webamp",
   },
+  NotAVirus: {
+    Component: dynamic(() => import("components/apps/NotAVirus")),
+    backgroundColor: "#0b5cff",
+    hasWindow: false,
+    hideTaskbarEntry: true,
+    hideTitlebar: true,
+    icon: "/System/Icons/Favicons/icons8-antivirus-32.png",
+    preferProcessIcon: true,
+    singleton: true,
+    title: "not-a-virus.exe",
+  },
 };
 
 export default directory;

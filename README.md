@@ -1,13 +1,6 @@
-## 🌌 **daedalOS** 🌌
+## 🌌 **DeskFolio** 🌌
 
 ## _Desktop environment in the browser_
-
-![Screenshot](https://raw.githubusercontent.com/DustinBrett/daedalOS/refs/heads/main/public/screenshot.png?raw=true)
-
-### Feature Overview
-
-[![Feature Overview](https://img.youtube.com/vi/djCqHH0SCmA/mqdefault.jpg)](http://www.youtube.com/watch?v=djCqHH0SCmA)
-
 # System 🧠
 
 ### [File System](https://github.com/jvilk/BrowserFS)
@@ -79,6 +72,8 @@
 - Set via image/video (Fill, Fit, Stretch, Tile, Center)
 - Picture Slideshow
 - [Astronomy Picture of the Day](https://api.nasa.gov/#apod)
+- [Art Institute of Chicago](https://api.artic.edu/docs/)
+- [Lorem Picsum](https://picsum.photos/)
 - AI Generated Wallpapers [Stable Diffusion](https://stability.ai/stable-diffusion)
 - Custom screen saver file support
   - [3D FlowerBox](https://github.com/kevin-shannon/3D-FlowerBox)
@@ -264,8 +259,8 @@ yarn serve
 ##### Docker
 
 ```
-docker build -t daedalos .
-docker run -dp 3000:3000 --rm --name daedalos daedalos
+docker build -t deskfolio .
+docker run -dp 3000:3000 --rm --name deskfolio deskfolio
 ```
 
 ##### Notes
