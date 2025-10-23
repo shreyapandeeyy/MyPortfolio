@@ -4,36 +4,61 @@ import { type Size } from "components/system/Window/RndWindow/useResizable";
 import type MatrixConfig from "components/system/Desktop/Wallpapers/Matrix/config";
 
 declare global {
-  interface Window {
-    DEBUG_DISABLE_WALLPAPER?: boolean;
-    STABLE_DIFFUSION_DELAY_IN_MIN_OVERRIDE?: number;
-    WallpaperDestroy?: () => void;
-  }
+  interface Window {
+    DEBUG_DISABLE_WALLPAPER?: boolean;
+    STABLE_DIFFUSION_DELAY_IN_MIN_OVERRIDE?: number;
+    WallpaperDestroy?: () => void;
+  }
 }
 
 export type WallpaperConfig =
-  | Partial<StableDiffusionConfig>
-  | Partial<typeof MatrixConfig>
-  | Partial<VantaWavesConfig>;
+  | Partial<StableDiffusionConfig>
+  | Partial<typeof MatrixConfig>
+  | Partial<VantaWavesConfig>;
 
 export type WallpaperFunc = (
-  el: HTMLElement | null,
-  config?: WallpaperConfig,
-  fallback?: () => void
+  el: HTMLElement | null,
+  config?: WallpaperConfig,
+  fallback?: () => void
 ) => Promise<void> | void;
 
 export type OffscreenRenderProps = {
-  canvas: OffscreenCanvas;
-  clockSize?: Size;
-  config?: Partial<StableDiffusionConfig> | VantaWavesConfig;
-  devicePixelRatio: number;
+  canvas: OffscreenCanvas;
+  clockSize?: Size;
+  config?: Partial<StableDiffusionConfig> | VantaWavesConfig;
+  devicePixelRatio: number;
 };
 
 export type WallpaperMenuItem = {
-  id: string;
-  name?: string;
-  requiresWebGPU?: boolean;
-  startsWith?: boolean;
+  id: string;
+  name?: string;
+  requiresWebGPU?: boolean;
+  startsWith?: boolean;
 };
 
 export type WallpaperMessage = { message: string; type: string };
+
+export type WallpaperHandler = (
+  el: HTMLElement | null,
+  config?: WallpaperConfig,
+  fallback?: () => void
+) => Promise<void> | void;
+
+export type ApodResponse = {
+  date: string;
+  hdurl?: string;
+  url: string;
+  title?: string;
+  explanation?: string;
+};
+
+export type ArtInstituteOfChicagoResponse = {
+  data: Array<{
+    id: number;
+    title: string;
+    image_id: string;
+    thumbnail?: {
+      url: string;
+    };
+  }>;
+};
