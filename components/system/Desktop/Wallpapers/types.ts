@@ -61,9 +61,10 @@ export type ArtInstituteOfChicagoResponse = {
   data: Array<{
     id: number;
     image_id: string;
-    title: string;
     thumbnail?: {
       url: string;
     };
+    title: string;
   }>;
 };
+
