@@ -38,11 +38,16 @@ export type WallpaperMenuItem = {
 
 export type WallpaperMessage = { message: string; type: string };
 
+export type WallpaperResult = {
+  fallbackBackground: string;
+  newWallpaperFit: string;
+  updateTimeout: number;
+  wallpaperUrl: string;
+};
+
 export type WallpaperHandler = (
-  el: HTMLElement | null,
-  config?: WallpaperConfig,
-  fallback?: () => void
-) => Promise<void> | void;
+  params?: { isAlt?: boolean }
+) => Promise<WallpaperResult> | WallpaperResult;
 
 export type ApodResponse = {
   date: string;
