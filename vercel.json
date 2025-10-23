@@ -1,28 +1,7 @@
 {
-  "buildCommand": "yarn build:prebuild && yarn build",
-  "outputDirectory": "out",
-  "installCommand": "yarn install",
-  "devCommand": "yarn dev",
-  "regions": ["iad1"],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cross-Origin-Opener-Policy",
-          "value": "same-origin"
-        },
-        {
-          "key": "Cross-Origin-Embedder-Policy",
-          "value": "credentialless"
-        }
-      ]
-    }
-  ]
+  "buildCommand": "yarn build:prebuild && yarn build",
+  "installCommand": "yarn install",
+  "devCommand": "yarn dev",
+  "regions": ["iad1"]
 }
+
