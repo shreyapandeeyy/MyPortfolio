@@ -1,7 +1,7 @@
 {
   "buildCommand": "yarn build:prebuild && yarn build",
   "outputDirectory": "out",
-  "framework": "nextjs",
+  "framework": "null",
   "installCommand": "yarn install",
   "devCommand": "yarn dev",
   "regions": ["iad1"],
