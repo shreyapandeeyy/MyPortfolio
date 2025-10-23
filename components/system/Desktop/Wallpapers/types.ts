@@ -60,8 +60,8 @@ export type ApodResponse = {
 export type ArtInstituteOfChicagoResponse = {
   data: Array<{
     id: number;
-    title: string;
     image_id: string;
+    title: string;
     thumbnail?: {
       url: string;
     };
