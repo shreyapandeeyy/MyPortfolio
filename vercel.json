@@ -1,6 +1,22 @@
 {
-  "buildCommand": "yarn build:prebuild && yarn build",
-  "installCommand": "yarn install",
-  "devCommand": "yarn dev",
-  "regions": ["iad1"]
+  "buildCommand": "yarn build:prebuild && yarn build",
+  "outputDirectory": ".next",
+  "installCommand": "yarn install",
+  "devCommand": "yarn dev",
+  "regions": ["iad1"],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Cross-Origin-Embedder-Policy",
+          "value": "credentialless"
+        }
+      ]
+    }
+  ]
 }
