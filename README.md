@@ -2,11 +2,7 @@
 
 ## _Desktop environment in the browser_
 
-![Screenshot](https://raw.githubusercontent.com/DustinBrett/daedalOS/refs/heads/main/public/screenshot.png?raw=true)
-
-### Feature Overview
-
-[![Feature Overview](https://img.youtube.com/vi/djCqHH0SCmA/mqdefault.jpg)](http://www.youtube.com/watch?v=djCqHH0SCmA)
+![Screenshot](https://github.com/user-attachments/assets/0d9218d5-7745-44bd-b3a3-5001eaa9c9e6)
 
 # System 🧠
 
